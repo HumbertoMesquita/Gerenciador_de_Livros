@@ -4,10 +4,10 @@ const { Pool } = require('pg');
 // Configurações da conexão com o banco de dados
 // É recomendado usar variáveis de ambiente para dados sensíveis
 const pool = new Pool({
-  user: 'adminlivros', // Troque pelo seu usuário
+  user: 'postgres', // Troque pelo seu usuário
   host: 'localhost',
   database: 'gereciadordelivros', // Troque pelo seu banco
-  password: 'livros@123', // Troque pela sua senha
+  password: 'admin@123', // Troque pela sua senha
   port: 5432,
 });
 
