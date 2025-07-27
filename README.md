@@ -2,17 +2,15 @@
 # Projeto Gerenciador de Livros
 
 
-Aplicação web full-stack para gerenciar um catálogo de livros, permitindo cadastrar, listar, editar e excluir livros. O frontend é construído com HTML, CSS e jQuery, com interações dinâmicas via AJAX, e o backend é uma API RESTful em Node.js/Express conectada a um banco de dados PostgreSQL.
+Aplicação web full-stack para gerenciar um catálogo de livros, permitindo cadastrar, listar, editar e excluir livros. O frontend é construído com HTML, CSS e jQuery, com interações dinâmicas via AJAX, e o backend é feito com Node.js/Express conectado a um banco de dados PostgreSQL.
 
 Funcionalidades
 
-    Formulário de Cadastro: Interface para adicionar novos livros (título, autor, número de páginas).
+Formulário de Cadastro: Interface para adicionar novos livros (título, autor, número de páginas).
 
-    Listagem Dinâmica: Exibição da lista de livros que se atualiza em tempo real, sem recarregar a página.
+Listagem Dinâmica: Exibição da lista de livros que se atualiza em tempo real, sem recarregar a página.
 
-    Interação via AJAX: Todas as operações (criar, ler, atualizar, deletar) são feitas de forma assíncrona.
-
-    API RESTful Completa: Backend com rotas para todas as operações de CRUD.
+Interação via AJAX: Todas as operações (criar, ler, atualizar, deletar) são feitas de forma assíncrona.
 
 
 Tecnologias:
@@ -27,6 +25,8 @@ Frontend
 
     Webpack (para empacotar os arquivos JavaScript)
 
+
+
 Backend
 
     Node.js
@@ -36,6 +36,8 @@ Backend
     CORS (para permitir requisições de origens diferentes)
 
     express.json() (body-parser integrado para tratar requisições JSON)
+
+
 
 Banco de Dados
 
