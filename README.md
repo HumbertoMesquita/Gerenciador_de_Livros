@@ -4,7 +4,7 @@
 
 Aplicação web full-stack para gerenciar um catálogo de livros, permitindo cadastrar, listar, editar e excluir livros. O frontend é construído com HTML, CSS e jQuery, com interações dinâmicas via AJAX, e o backend é feito com Node.js/Express conectado a um banco de dados PostgreSQL.
 
-Funcionalidades
+Funcionalidades:
 
 Formulário de Cadastro: Interface para adicionar novos livros (título, autor, número de páginas).
 
@@ -13,9 +13,8 @@ Listagem Dinâmica: Exibição da lista de livros que se atualiza em tempo real,
 Interação via AJAX: Todas as operações (criar, ler, atualizar, deletar) são feitas de forma assíncrona.
 
 
-Tecnologias:
 
-Frontend
+Frontend:
 
     HTML5 e CSS3
 
@@ -27,7 +26,7 @@ Frontend
 
 
 
-Backend
+Backend:
 
     Node.js
 
@@ -39,7 +38,7 @@ Backend
 
 
 
-Banco de Dados
+Banco de Dados:
 
     PostgreSQL
 
