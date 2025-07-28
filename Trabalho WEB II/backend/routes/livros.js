@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../db/database'); // Importa a conexão com o banco
+const pool = require('../db/database'); 
 
-// Rota para listar todos os livros (GET /livros)
 router.get('/livros', async (req, res) => {
   try {
     const { rows } = await pool.query('SELECT * FROM livro ORDER BY id ASC');
@@ -12,7 +11,6 @@ router.get('/livros', async (req, res) => {
   }
 });
 
-// Rota para buscar um livro pelo ID (GET /livro/:id)
 router.get('/livro/:id', async (req, res) => {
   const { id } = req.params;
   try {
@@ -26,7 +24,6 @@ router.get('/livro/:id', async (req, res) => {
   }
 });
 
-// Rota para inserir um novo livro (POST /livro)
 router.post('/livro', async (req, res) => {
   const { titulo, autor, npags } = req.body;
   try {
@@ -40,7 +37,6 @@ router.post('/livro', async (req, res) => {
   }
 });
 
-// Rota para atualizar um livro (PUT /livro/:id)
 router.put('/livro/:id', async (req, res) => {
   const { id } = req.params;
   const { titulo, autor, npags } = req.body;
@@ -58,7 +54,6 @@ router.put('/livro/:id', async (req, res) => {
   }
 });
 
-// Rota para remover um livro (DELETE /livro/:id)
 router.delete('/livro/:id', async (req, res) => {
   const { id } = req.params;
   try {
@@ -66,7 +61,7 @@ router.delete('/livro/:id', async (req, res) => {
     if (result.rowCount === 0) {
       return res.status(404).json({ message: 'Livro não encontrado' });
     }
-    res.status(204).send(); // 204 No Content
+    res.status(204).send();
   } catch (error) {
     res.status(500).json({ error: error.message });
   }

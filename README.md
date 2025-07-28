@@ -45,6 +45,11 @@ Banco de Dados:
     Driver node-postgres (pg) com uso de parâmetros preparados para segurança.
     
     
+Link do vídeo demostrativo
+
+
+	https://www.youtube.com/watch?v=vtr875hXReA
+
 
 Como Rodar o Projeto Localmente
 
@@ -63,7 +68,6 @@ Passos:
 	git clone https://github.com/HumbertoMesquita/Gerenciador_de_Livros
 
 Instalar Dependências: Execute o comando abaixo nas pastas frontend e backend.
-Bash
 
 	# No backend
 	npm install
@@ -85,6 +89,7 @@ b. Execute o script para criar a tabela livro:
 	psql -h localhost -U postgres -d nome_do_banco -f ./backend/db/db.sql
 
 Configurar Variáveis de Ambiente:
+
 No arquivo backend/db/database.js  modifique as seguintes configurações, substituindo pela sua senha do PostgreSQL:
 
 	PORT=3000
@@ -94,8 +99,7 @@ No arquivo backend/db/database.js  modifique as seguintes configurações, subst
 	DB_PASSWORD=sua_senha_aqui
 	DB_DATABASE=nome_do_banco
 
-Executar a Aplicação:
-Você precisará de dois terminais.
+Executar a Aplicação: (Precisará de dois terminais)
 
 Terminal 1 (Frontend):
 
@@ -109,4 +113,5 @@ Terminal 2 (Backend):
     npm start
 
 A API estará disponível em http://localhost:3000, abra no seu navegador.
+
 

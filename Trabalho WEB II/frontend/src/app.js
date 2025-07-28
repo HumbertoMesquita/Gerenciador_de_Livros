@@ -1,15 +1,13 @@
-// Garante que o DOM está carregado antes de executar o código
 $(document).ready(function() {
     const apiUrl = 'http://localhost:3000';
 
-    // Função para carregar e exibir os livros na tabela
     function carregarLivros() {
         $.ajax({
             url: `${apiUrl}/livros`,
             method: 'GET',
             success: function(data) {
                 const tabelaCorpo = $('#tabela-livros tbody');
-                tabelaCorpo.empty(); // Limpa a tabela antes de preencher
+                tabelaCorpo.empty();
 
                 data.forEach(livro => {
                     tabelaCorpo.append(`
@@ -28,7 +26,6 @@ $(document).ready(function() {
         });
     }
 
-    // Manipulador de evento para o formulário (criar e atualizar)
     $('#form-livro').on('submit', function(event) {
         event.preventDefault();
 
@@ -48,19 +45,17 @@ $(document).ready(function() {
             contentType: 'application/json',
             data: JSON.stringify(livroData),
             success: function() {
-                carregarLivros(); // Recarrega a lista
-                $('#form-livro')[0].reset(); // Limpa o formulário
-                $('#livro-id').val(''); // Limpa o campo oculto
+                carregarLivros(); 
+                $('#form-livro')[0].reset();
+                $('#livro-id').val('');
             }
         });
     });
 
-    // Manipulador de evento para o botão "Editar"
     $('#tabela-livros').on('click', '.btn-editar', function() {
         const tr = $(this).closest('tr');
         const livroId = tr.data('id');
         
-        // Pega os dados da linha para preencher o formulário
         const titulo = tr.find('td:eq(0)').text();
         const autor = tr.find('td:eq(1)').text();
         const npags = tr.find('td:eq(2)').text();
@@ -71,7 +66,6 @@ $(document).ready(function() {
         $('#npags').val(npags);
     });
 
-    // Manipulador de evento para o botão "Excluir"
     $('#tabela-livros').on('click', '.btn-excluir', function() {
         if (confirm('Tem certeza que deseja excluir este livro?')) {
             const livroId = $(this).closest('tr').data('id');
@@ -80,12 +74,11 @@ $(document).ready(function() {
                 url: `${apiUrl}/livro/${livroId}`,
                 method: 'DELETE',
                 success: function() {
-                    carregarLivros(); // Recarrega a lista
+                    carregarLivros();
                 }
             });
         }
     });
 
-    // Carrega os livros ao iniciar a página
     carregarLivros();
 });

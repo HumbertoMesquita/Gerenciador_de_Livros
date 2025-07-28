@@ -1,15 +1,13 @@
-// Importa o módulo 'pg'
+
 const { Pool } = require('pg');
 
-// Configurações da conexão com o banco de dados
-// É recomendado usar variáveis de ambiente para dados sensíveis
+
 const pool = new Pool({
-  user: 'postgres', // Troque pelo seu usuário
+  user: 'postgres', 
   host: 'localhost',
-  database: 'gereciadordelivros', // Troque pelo seu banco
-  password: 'admin@123', // Troque pela sua senha
+  database: 'gereciadordelivros', 
+  password: 'admin@123', 
   port: 5432,
 });
 
-// Exporta a instância do pool para ser usada em outros módulos
 module.exports = pool;

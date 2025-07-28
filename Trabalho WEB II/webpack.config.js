@@ -1,10 +1,9 @@
 const path = require('path');
 
 module.exports = {
-  entry: './frontend/src/app.js', // Arquivo de entrada
+  entry: './frontend/src/app.js',
   output: {
-    filename: 'bundle.js', // Arquivo de saída
-    path: path.resolve(__dirname, 'frontend/public/dist'), // Pasta de saída
-    publicPath: '/dist/'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'frontend/public/dist'),
   }
 };
