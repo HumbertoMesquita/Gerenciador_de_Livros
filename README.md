@@ -51,7 +51,7 @@ Link do vídeo demostrativo
 	https://www.youtube.com/watch?v=vtr875hXReA
 
 
-Como Rodar o Projeto Localmente
+Como rodar o projeto Localmente
 
 Pré-requisitos instalados:
 
